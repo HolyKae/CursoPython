@@ -1,0 +1,5 @@
+n = input('Digite seu nome: ').strip()
+n = n.split()
+print('Primeiro nome: ', n[0])
+n.reverse()
+print('Ultimo nome: ', n[0])
