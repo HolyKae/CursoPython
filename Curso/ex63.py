@@ -1,6 +1,6 @@
 n = int(input('Digite um número: '))
 f = int(input('Quantos elementos? '))
-c = 0
+c = 2
 f1 = 0
 f2 = 0
 print(0, n, end=' ')
