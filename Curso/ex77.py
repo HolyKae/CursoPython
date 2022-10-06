@@ -1,3 +1,4 @@
+
 p = tuple(input(f'Digite a {c+1}ª palavra.\n').upper() for c in range(4))
 print(p)
 for i in range(len(p)):
