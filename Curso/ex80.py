@@ -2,25 +2,27 @@ import random
 v = []
 for i in range(5):
     n = random.randint(1, 99)
-    if i == 0:
-        print(f'O número {n} é o primeiro da lista')
-        v.append(n)
-    else:
+    while n in v:
+        n = random.randint(1, 99)
         if n not in v:
-            print(n, end=' ')
-            if n > v[-1]:
-                print(f'Vai ser adicionado á última posição da lista')
-                v.insert(v[-1], n)
-            elif n < v[0]:
-                print(f'Vai ser adicionado á primeira posição da lista')
-                v.insert(0, n)
-            else:
-                c = 1
-                if n < v[c]:
-                    print(f'vai ser adicionado á posição {c} da lista')
-                    v.insert(c, n)
-                elif n > v[c]:
-                    print(f'vai ser adicionado á posição {c+1} da lista')
-                    v.insert(c+1, n)
+            break
+    else:
+        if i == 0 or n < v[0]:
+            v.insert(0, n)
+            print(n)
+            print(f'O número {n} vai para o começo da lista')
+        elif n > v[-1]:
+            v.append(n)
+            print(n)
+            print(f'O número {n} vai para o final da lista')
+        else:
+            p = 0
+            while p < len(v):
+                if n <= v[p]:
+                    print(n)
+                    print(f'O número {n} vai para a {p+1}ª posição na lista')
+                    v.insert(p, n)
+                    break
+                p += 1
     print(v)
 
