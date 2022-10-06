@@ -6,7 +6,7 @@ if e.count('(') != e.count(')'):
 if e.count('(') == e.count(')'):
     for i in range(len(e)):
         if '(' in e[i]:
-            if not e[i:].count(')'):
+            if ')' not in e[i:]:
                 v = False
     if not v:
         print('A expressão é inválida.')
