@@ -1,5 +1,14 @@
 e = list(input('Digite uma expressão: '))
+c = 0
+v = True
+if e.count('(') != e.count(')'):
+    print('A expressão é inválida.')
 if e.count('(') == e.count(')'):
-    print('A expressão é válida.')
-else:
-    print('A lista é inválida.')
+    for i in range(len(e)):
+        if '(' in e[i]:
+            if not e[i:].count(')'):
+                v = False
+    if not v:
+        print('A expressão é inválida.')
+    else:
+        print('A expressão é válida.')
