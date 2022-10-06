@@ -1,6 +1,6 @@
 import random
 v = []
-for i in range(5):
+for i in range(10):
     n = random.randint(1, 99)
     while n in v:
         n = random.randint(1, 99)
