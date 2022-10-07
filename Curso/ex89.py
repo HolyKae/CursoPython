@@ -24,14 +24,18 @@ while True:
         for i in range(len(al)):
             if d in al[i][0]:
                 print('--' * 50)
-                print(f'Nome: {al[i][0][0]:.<20} -+-+-+- Notas: 1ª- {al[i][1][0]:2.1f} -+- 2ª- {al[i][1][1]:2.1f} -+-+-+- Média: {al[i][2][0]:2.1f}')
+                print(f'Nome: {al[i][0][0]:.<20} -+-+-+- '
+                      f'Notas: 1ª- {al[i][1][0]:2.1f} -+- 2ª- {al[i][1][1]:2.1f} '
+                      f'-+-+-+- Média: {al[i][2][0]:2.1f}')
                 print('--' * 50)
         break
     else:
         print('--' * 50)
         for i in range(len(al)):
             print(
-                f'Nome: {al[i][0][0]:.<20} -+-+-+- Notas: 1ª- {al[i][1][0]:2.1f} -+- 2ª- {al[i][1][1]:2.1f} -+-+-+- Média: {al[i][2][0]:2.1f}')
+                f'Nome: {al[i][0][0]:.<20} -+-+-+- '
+                f'Notas: 1ª- {al[i][1][0]:2.1f} -+- 2ª- {al[i][1][1]:2.1f} '
+                f'-+-+-+- Média: {al[i][2][0]:2.1f}')
             print('--' * 50)
         break
 
