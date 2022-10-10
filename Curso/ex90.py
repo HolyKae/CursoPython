@@ -1,5 +1,4 @@
-n = {}
-n['Nome'] = input('Nome: ')
+n = {'Nome': input('Nome: ')}
 n['Nota'] = int(input(f'Digite a média de {n["Nome"]}: '))
 if n['Nota'] >= 7:
     n['Situação'] = 'APROVADO'
