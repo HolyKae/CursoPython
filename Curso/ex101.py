@@ -1,7 +1,7 @@
 def voto(n):
     from datetime import date
-    a = date.today()
-    n = a.year - n
+    a = date.today().year
+    n = a - n
     if n < 16:
         return print('Negado')
     if n > 65 or n < 18:

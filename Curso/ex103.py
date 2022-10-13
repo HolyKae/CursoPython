@@ -1,11 +1,14 @@
-def ficha(j='', g=0):
-    j = input('Nome: ')
-    g = input('Gols: ')
-    if j == '':
-        j = '<desconhecido>'
-    if g == '':
-        g = 0
-    return print(f'O jogador {j} fez {g} gol(s) no campeonato.')
+def ficha(jog='<desconhecido>', gol=0):
+    print(f'O jogador {jog} fez {gol} gol(s) no campeonato.')
 
 
-ficha()
+j = input('Nome: ')
+g = input('Gols: ')
+if g.isnumeric():
+    g = int(g)
+else:
+    g = 0
+if j.strip() == '':
+    ficha(gol=g)
+else:
+    ficha(j, g)
